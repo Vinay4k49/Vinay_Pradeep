@@ -1,0 +1,203 @@
+/* Name: Vinay Pradeep George
+Student ID: 15020746 */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+header, main, footer {
+    padding: 20px 5%;
+}
+
+/* --- HEADER & TEXT COLORS --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #007abf; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #005a8c;
+}
+
+strong, b {
+    color: #007abf;
+}
+
+
+/* --- NAVIGATION --- */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li a {
+    display: block;
+    background-color: #007abf; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav li a:hover {
+    background-color: #005a8c; 
+}
+
+a {
+    color: #007abf;
+    text-decoration: none;
+    border-bottom: 1px solid #b3d9ee; 
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #000261; 
+    border-bottom-color: #005a8c; 
+}
+
+/* --- BOOK YOUR APPOINTMENT NOW BUTTON --- */
+.cta-button {
+    display: inline-block; 
+    background-color: #28a745; 
+    color: #ffffff;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none; 
+    transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    color: #ffffff;
+    border: none;
+}
+
+
+/* --- MAIN CONTENT CARDS --- */
+section,
+.featured-article,
+.other-articles {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+section:hover,
+.featured-article:hover,
+.other-articles:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* --- STAFF PAGE --- */
+.staff-member {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.staff-member img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0, 0.08);
+}
+
+
+/* --- SERVICES PAGE LAYOUT --- */
+
+#services-list ul,
+#annual-checkup ul {
+    list-style: none; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px; 
+}
+
+#services-list li,
+#annual-checkup li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+#services-list li::before {
+    content: '✓';
+    color: #28a745; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* --- CONTACT PAGE LAYOUT --- */
+#contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; 
+}
+
+/* Style the individual boxes inside the grid */
+.contact-info,
+.address,
+.hours {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Make the subheadings in the boxes stand out */
+#contact-details h4 {
+    color: #007abf;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 20px;
+}
+
+footer div{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
