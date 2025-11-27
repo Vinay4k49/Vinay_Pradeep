@@ -1,0 +1,407 @@
+/* Name: Vinay Pradeep George
+Student ID: 15020746 */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+header, main, footer {
+    padding: 20px 5%;
+}
+
+/* --- TEXT COLORS & HEADINGS --- */
+h1, h2, h3, h4, h5, h6 {
+    color: #005a8c;
+}
+
+strong, b {
+    color: #007abf;
+}
+
+/* --- CENTERED HEADER & LOGO --- */
+.site-header {
+    background-color: #fff;
+    padding: 20px 0;        
+    text-align: center;     
+    border-bottom: 3px solid #007abf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+    margin-bottom: 20px; 
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    display: inline-block;
+}
+
+/* --- NAVIGATION (Restored "Box" Style) --- */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;             
+    justify-content: center;   
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 15px;       /* Space between the buttons */
+}
+
+nav ul li a {
+    display: block;
+    background-color: #007abf; /* The Blue Box Color */
+    color: #ffffff;            /* White Text */
+    text-decoration: none;
+    padding: 10px 20px;        /* Size of the box */
+    border-radius: 5px;        /* Rounded corners */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase; 
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+nav ul li a:hover {
+    background-color: #005a8c; /* Darker blue when you hover */
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        width: 100%; /* Full width buttons on phone */
+        box-sizing: border-box;
+    }
+}
+
+/* --- GENERAL LINKS (Body text links) --- */
+/* This targets links that are NOT in the nav bar */
+main a {
+    color: #007abf;
+    text-decoration: none;
+    border-bottom: 1px solid #b3d9ee; 
+    transition: all 0.2s ease;
+}
+
+main a:hover {
+    color: #000261; 
+    border-bottom-color: #005a8c; 
+}
+
+/* --- BOOK YOUR APPOINTMENT BUTTON --- */
+.cta-button {
+    display: inline-block; 
+    background-color: #28a745; 
+    color: #ffffff !important; 
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none; 
+    transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    border: none;
+}
+
+/* --- MAIN CONTENT CARDS --- */
+section,
+.featured-article,
+.other-articles {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+section:hover,
+.featured-article:hover,
+.other-articles:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* --- STAFF PAGE --- */
+.staff-member {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.staff-member img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0, 0.08);
+}
+
+
+/* --- SERVICES PAGE LAYOUT --- */
+#services-list ul,
+#annual-checkup ul {
+    list-style: none; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px; 
+}
+
+#services-list li,
+#annual-checkup li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+#services-list li::before {
+    content: '✓';
+    color: #28a745; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* --- CONTACT PAGE LAYOUT --- */
+#contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; 
+}
+
+/* Style the individual boxes inside the grid */
+.contact-info,
+.address,
+.hours {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Make the subheadings in the boxes stand out */
+#contact-details h4 {
+    color: #007abf;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 20px;
+}
+
+footer div{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* --- IMPROVED BOOKING FORM STYLING --- */
+
+#booking-section {
+    max-width: 1400px;        
+    margin: 40px auto;       
+    background-color: #ffffff;
+    padding: 30px 40px;      
+    border-radius: 10px;     
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border-top: 5px solid #007abf; 
+}
+
+#booking-section h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #005a8c;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* --- GRID LAYOUT FOR FORM --- */
+#bookingForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 25px;               
+    row-gap: 15px;                  
+}
+
+/* Make these specific items span across BOTH columns */
+.full-width {
+    grid-column: 1 / -1; 
+}
+
+/* Style the individual containers */
+.form-group label {
+    font-weight: bold;
+    color: #444;
+    display: block;          
+    margin-bottom: 8px;      
+}
+
+/* Style inputs */
+#bookingForm input[type="text"],
+#bookingForm input[type="email"],
+#bookingForm input[type="tel"],
+#bookingForm input[type="date"],
+#bookingForm select {
+    width: 100%;             
+    padding: 12px 15px;      
+    border: 1px solid #ccc;  
+    border-radius: 5px;      
+    font-size: 1rem;         
+    box-sizing: border-box;  
+    transition: border 0.3s ease; 
+    background-color: #fcfcfc;
+    font-family: Arial, sans-serif; 
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    border-color: #007abf;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Style the Submit Button */
+#bookingForm input[type="submit"] {
+    width: 100%;             
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#bookingForm input[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 600px) {
+    #bookingForm {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* --- Side-by-Side Images Styling --- */
+.side-by-side-images {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;               
+    margin-top: 20px;
+}
+
+.side-by-side-images img {
+    width: 48%;             
+    height: 300px;           
+    object-fit: cover;      
+    margin: 0;               
+}
+
+@media (max-width: 768px) {
+    .side-by-side-images {
+        flex-direction: column;
+    }
+    .side-by-side-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* --- HAMBURGER MENU STYLES --- */
+
+/* 1. Desktop: Hide the button */
+.hamburger-icon {
+    display: none; 
+    font-size: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 40px; 
+    color: #007abf;
+    z-index: 1000;
+}
+
+.site-header {
+    position: relative; 
+}
+
+/* 2. Mobile: Show button, toggle menu */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block; 
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        position: absolute; 
+        top: 100px;         
+        left: 0;
+        z-index: 999;
+    }
+
+    /* WHEN ACTIVE (This class is added by JS) */
+    nav ul.active {
+        display: flex !important; 
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 5px;
+    }
+}
